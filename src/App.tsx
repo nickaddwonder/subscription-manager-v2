@@ -1,14 +1,27 @@
-import { useState } from "react";
+import {
+  ClerkProvider,
+  RedirectToSignIn,
+  SignedIn,
+  SignedOut,
+} from "@clerk/clerk-react";
+import Welcome from "./Welcome";
 
-// if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
-//   throw new Error("Missing Publishable Key");
-// }
-// const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
+const clerkPubKey = import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY;
+if (!clerkPubKey) {
+  throw new Error("Missing Publishable Key");
+}
 
 function App() {
-  // const [count, setCount] = useState(0);
-
-  return <>hello world</>;
+  return (
+    <ClerkProvider publishableKey={clerkPubKey}>
+      <SignedIn>
+        <Welcome />
+      </SignedIn>
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+    </ClerkProvider>
+  );
 }
 
 export default App;
