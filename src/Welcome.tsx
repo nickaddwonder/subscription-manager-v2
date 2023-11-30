@@ -12,7 +12,11 @@ const Welcome: FC = () => {
 
     whatever();
   }, []);
-  return <div>Welcome to logged in!</div>;
+  return (
+    <div className="text-red-300 lg:text-blue-400 xl:text-blue-500">
+      Welcome to logged in!
+    </div>
+  );
 };
 
 export default Welcome;
