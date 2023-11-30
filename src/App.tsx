@@ -5,7 +5,7 @@ import {
   SignedOut,
 } from "@clerk/clerk-react";
 import Welcome from "./Welcome";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useNavigate } from "react-router-dom";
 
 const clerkPubKey = import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY;
 if (!clerkPubKey) {
@@ -13,9 +13,16 @@ if (!clerkPubKey) {
 }
 
 function App() {
+  const navigate = useNavigate();
   return (
     <BrowserRouter>
-      <ClerkProvider publishableKey={clerkPubKey}>
+      <ClerkProvider
+        publishableKey={clerkPubKey}
+        navigate={(to) => {
+          console.log(to);
+          navigate(to);
+        }}
+      >
         <SignedIn>
           <Welcome />
         </SignedIn>
