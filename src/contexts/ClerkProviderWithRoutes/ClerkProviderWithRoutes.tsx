@@ -24,12 +24,19 @@ const ClerkProviderWithRoutes: FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<TestComponent />} />
-        {/* <SignedIn>
-          <Welcome />
-        </SignedIn>
-        <SignedOut>
-          <RedirectToSignIn />
-        </SignedOut> */}
+        <Route
+          path="/dashboard"
+          element={
+            <>
+              <SignedIn>
+                <Dashboard />
+              </SignedIn>
+              <SignedOut>
+                <RedirectToSignIn />
+              </SignedOut>
+            </>
+          }
+        />
       </Routes>
     </ClerkProvider>
   );
