@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { ClerkProvider, SignedIn, SignedOut } from "@clerk/clerk-react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import Home from "./../../pages/Home/Home";
+import Home from "@pages/Home/Home";
 import TestComponent from "../../pages/TestComponent/TestComponent";
 import { RedirectToSignIn } from "@clerk/clerk-react";
 import Dashboard from "./../../pages/Dashboard/Dashboard";

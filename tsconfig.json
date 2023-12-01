@@ -23,8 +23,13 @@
     "baseUrl": ".",
 
     "paths": {
-      "@contexts/*": ["./src/contexts/*"],
-      "@pages/*": ["./src/pages/*"]
+      "@/*": ["src"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components"],
+      "@contexts/*": ["src/contexts/*"],
+      "@firebase/*": ["src/firebase/*"],
+      "@icons/*": ["src/icons/*"],
+      "@pages/*": ["src/pages/*"]
     }
   },
   "include": ["src"],
