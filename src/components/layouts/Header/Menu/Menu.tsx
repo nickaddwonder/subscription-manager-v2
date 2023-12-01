@@ -1,5 +1,5 @@
 import { FC } from "react";
-import HamburgerMenu from "./../../../../icons/HamburgerMenu/HamburgerMenu";
+import HamburgerMenu from "@icons/HamburgerMenu/HamburgerMenu";
 import MenuItem from "./MenuItem/MenuItem";
 
 const Menu: FC = () => {

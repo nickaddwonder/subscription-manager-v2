@@ -25,7 +25,7 @@
     "paths": {
       "@/*": ["src"],
       "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components"],
+      "@components/*": ["src/components/*"],
       "@contexts/*": ["src/contexts/*"],
       "@firebase/*": ["src/firebase/*"],
       "@icons/*": ["src/icons/*"],
