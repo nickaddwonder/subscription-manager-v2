@@ -8,7 +8,7 @@ const Menu: FC = () => {
       <button onClick={() => console.log("me clicked!")}>
         <HamburgerMenu />
       </button>
-      <nav className="absolute -bottom-[24px] right-0 bg-white">
+      <nav className="absolute -bottom-[32px] right-0 bg-white shadow-[4px_4px_3px_0px_rgba(0,0,0,0.10)]">
         <ul className="p-3">
           <MenuItem>this is an item</MenuItem>
         </ul>
