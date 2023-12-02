@@ -5,6 +5,8 @@ import Home from "@pages/Home/Home";
 import Dashboard from "@pages/Dashboard/Dashboard";
 import Header from "@components/layouts/Header/Header";
 import ProtectedRoutes from "@components/ProtectedRoutes/ProtectedRoutes";
+import WatchList from "@pages/WatchList/WatchList";
+import Reports from "@pages/Reports/Reports";
 
 const clerkPubKey = import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY;
 if (!clerkPubKey) {
@@ -29,6 +31,22 @@ const ClerkProviderWithRoutes: FC = () => {
           element={
             <ProtectedRoutes>
               <Dashboard />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/watchlist"
+          element={
+            <ProtectedRoutes>
+              <WatchList />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/reports"
+          element={
+            <ProtectedRoutes>
+              <Reports />
             </ProtectedRoutes>
           }
         />
