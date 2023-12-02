@@ -29,7 +29,7 @@
       "@contexts/*": ["src/contexts/*"],
       "@functions/*": ["src/functions/*"],
       "@icons/*": ["src/icons/*"],
-      "@pages/*": ["src/pages/*"]
+      "@pages/*": ["src/pages/*"],
     }
   },
   "include": ["src"],
