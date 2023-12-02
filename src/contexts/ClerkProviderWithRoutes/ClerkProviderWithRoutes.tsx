@@ -1,10 +1,10 @@
 import { FC } from "react";
-import { ClerkProvider, SignedIn, SignedOut } from "@clerk/clerk-react";
+import { ClerkProvider } from "@clerk/clerk-react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "@pages/Home/Home";
-import { RedirectToSignIn } from "@clerk/clerk-react";
 import Dashboard from "@pages/Dashboard/Dashboard";
 import Header from "@components/layouts/Header/Header";
+import ProtectedRoutes from "@components/ProtectedRoutes/ProtectedRoutes";
 
 const clerkPubKey = import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY;
 if (!clerkPubKey) {
@@ -27,14 +27,9 @@ const ClerkProviderWithRoutes: FC = () => {
         <Route
           path="/dashboard"
           element={
-            <>
-              <SignedIn>
-                <Dashboard />
-              </SignedIn>
-              <SignedOut>
-                <RedirectToSignIn />
-              </SignedOut>
-            </>
+            <ProtectedRoutes>
+              <Dashboard />
+            </ProtectedRoutes>
           }
         />
       </Routes>
