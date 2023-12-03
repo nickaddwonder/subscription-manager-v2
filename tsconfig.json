@@ -27,9 +27,9 @@
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@contexts/*": ["src/contexts/*"],
-      "@firebase/*": ["src/firebase/*"],
+      "@functions/*": ["src/functions/*"],
       "@icons/*": ["src/icons/*"],
-      "@pages/*": ["src/pages/*"]
+      "@pages/*": ["src/pages/*"],
     }
   },
   "include": ["src"],
