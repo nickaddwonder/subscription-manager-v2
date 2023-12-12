@@ -23,10 +23,11 @@
     "baseUrl": ".",
 
     "paths": {
-      "@/*": ["src"],
+      "@/*": ["src/*"],
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@contexts/*": ["src/contexts/*"],
+      "@customTypes/*": ["src/types/*"],
       "@functions/*": ["src/functions/*"],
       "@icons/*": ["src/icons/*"],
       "@pages/*": ["src/pages/*"],
